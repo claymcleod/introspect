@@ -2,9 +2,13 @@
 name = "introspect-core"
 description = "A crate containing the core functionality used for `introspect` and supporting crates"
 version = "0.1.0"
+documentation = "https://docs.rs/introspect-core"
+authors.workspace = true
 edition.workspace = true
+homepage.workspace = true
 license.workspace = true
 readme.workspace = true
+repository.workspace = true
 
 [dependencies]
 

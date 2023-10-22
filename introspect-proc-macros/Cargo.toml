@@ -2,9 +2,13 @@
 name = "introspect-proc-macros"
 description = "Procedural macros for `introspect`"
 version = "0.1.0"
+documentation = "https://docs.rs/introspect-proc-macros"
+authors.workspace = true
 edition.workspace = true
+homepage.workspace = true
 license.workspace = true
 readme.workspace = true
+repository.workspace = true
 
 [lib]
 proc-macro = true

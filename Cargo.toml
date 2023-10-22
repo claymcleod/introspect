@@ -3,9 +3,12 @@ members = ["introspect", "introspect-core", "introspect-proc-macros"]
 resolver = "2"
 
 [workspace.package]
+authors = ["Clay McLeod <clay.l.mcleod@gmail.com>"]
 edition = "2021"
+homepage = "https://github.com/claymcleod/introspection"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
+repository = "https://github.com/claymcleod/introspection"
 
 [workspace.dependencies]
 proc-macro2 = { version = "1.0.69" }

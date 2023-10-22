@@ -2,9 +2,13 @@
 name = "introspect"
 description = "Introspection for Rust `struct`s and `enum`s (\"entities\") and their respective fields and variants (\"members\")"
 version = "0.1.0"
+documentation = "https://github.com/claymcleod/introspect#readme"
+authors.workspace = true
 edition.workspace = true
+homepage.workspace = true
 license.workspace = true
 readme.workspace = true
+repository.workspace = true
 
 [features]
 default = ['derive']

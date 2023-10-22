@@ -1,0 +1,13 @@
+[package]
+name = "introspect-core"
+description = "A crate containing the core functionality used for `introspect` and supporting crates"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+readme.workspace = true
+
+[dependencies]
+
+proc-macro2.workspace = true
+quote.workspace = true
+syn.workspace = true

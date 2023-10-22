@@ -1,0 +1,16 @@
+[package]
+name = "introspect-proc-macros"
+description = "Procedural macros for `introspect`"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+readme.workspace = true
+
+[lib]
+proc-macro = true
+
+[dependencies]
+introspect-core = { path = "../introspect-core", version = "0.1.0" }
+proc-macro2.workspace = true
+quote.workspace = true
+syn.workspace = true

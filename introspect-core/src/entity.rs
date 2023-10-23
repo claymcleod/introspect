@@ -39,13 +39,13 @@ mod tests {
     fn an_enum_converts_to_string_correctly() {
         let member = Entity::Enum(Enum::new("Name".into(), Some("Documentation.".into())));
 
-        assert_eq!(member.to_string(), "::introspect::Entity::Enum(::introspect::Enum::new(\"Name\".into(), Some(\"Documentation.\".into())))");
+        assert_eq!(member.to_string(), "::introspect::Entity::Enum(::introspect::Enum::new(r#\"Name\"#.into(), Some(r#\"Documentation.\"#.into())))");
     }
 
     #[test]
     fn a_struct_converts_to_string_correctly() {
         let member = Entity::Struct(Struct::new("Name".into(), Some("Documentation.".into())));
 
-        assert_eq!(member.to_string(), "::introspect::Entity::Struct(::introspect::Struct::new(\"Name\".into(), Some(\"Documentation.\".into())))");
+        assert_eq!(member.to_string(), "::introspect::Entity::Struct(::introspect::Struct::new(r#\"Name\"#.into(), Some(r#\"Documentation.\"#.into())))");
     }
 }

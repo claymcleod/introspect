@@ -116,10 +116,10 @@ impl Variant {
 impl std::fmt::Display for Variant {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "::introspect::r#enum::Variant::new(")?;
-        write!(f, "\"{}\".into(), ", self.identifier)?;
+        write!(f, "r#\"{}\"#.into(), ", self.identifier)?;
 
         match self.documentation.as_ref() {
-            Some(documentation) => write!(f, "Some(\"{}\".into())", documentation)?,
+            Some(documentation) => write!(f, "Some(r#\"{}\"#.into())", documentation)?,
             None => write!(f, "None")?,
         };
 
@@ -175,7 +175,7 @@ mod tests {
 
         assert_eq!(
             variant.to_string(),
-            "::introspect::r#enum::Variant::new(\"Name\".into(), Some(\"Documentation.\".into()))"
+            "::introspect::r#enum::Variant::new(r#\"Name\"#.into(), Some(r#\"Documentation.\"#.into()))"
         )
     }
 
@@ -185,7 +185,7 @@ mod tests {
 
         assert_eq!(
             variant.to_string(),
-            "::introspect::r#enum::Variant::new(\"Name\".into(), None)"
+            "::introspect::r#enum::Variant::new(r#\"Name\"#.into(), None)"
         )
     }
 }

@@ -39,7 +39,7 @@ mod tests {
     fn an_enum_variant_converts_to_string_correctly() {
         let member = Member::Variant(Variant::new("Name".into(), Some("Documentation.".into())));
 
-        assert_eq!(member.to_string(), "::introspect::Member::Variant(::introspect::r#enum::Variant::new(\"Name\".into(), Some(\"Documentation.\".into())))");
+        assert_eq!(member.to_string(), "::introspect::Member::Variant(::introspect::r#enum::Variant::new(r#\"Name\"#.into(), Some(r#\"Documentation.\"#.into())))");
     }
 
     #[test]
@@ -49,6 +49,6 @@ mod tests {
             Some("Documentation.".into()),
         ));
 
-        assert_eq!(member.to_string(), "::introspect::Member::Field(::introspect::r#struct::Field::new(Some(\"Name\".into()), Some(\"Documentation.\".into())))");
+        assert_eq!(member.to_string(), "::introspect::Member::Field(::introspect::r#struct::Field::new(Some(r#\"Name\"#.into()), Some(r#\"Documentation.\"#.into())))");
     }
 }

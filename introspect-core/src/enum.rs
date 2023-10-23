@@ -116,10 +116,10 @@ impl Enum {
 impl std::fmt::Display for Enum {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "::introspect::Enum::new(")?;
-        write!(f, "\"{}\".into(), ", self.identifier)?;
+        write!(f, "r#\"{}\"#.into(), ", self.identifier)?;
 
         match self.documentation.as_ref() {
-            Some(documentation) => write!(f, "Some(\"{}\".into())", documentation)?,
+            Some(documentation) => write!(f, "Some(r#\"{}\"#.into())", documentation)?,
             None => write!(f, "None")?,
         };
 

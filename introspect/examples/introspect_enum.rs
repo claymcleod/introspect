@@ -5,6 +5,8 @@ use introspect::Member;
 
 /// This is the documentation for the [`ExampleOne`] enum.
 ///
+/// "Testing"
+///
 /// We can add more text down here.
 #[allow(dead_code)]
 #[derive(Introspect)]

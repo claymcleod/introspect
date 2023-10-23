@@ -114,14 +114,14 @@ impl std::fmt::Display for Field {
         write!(f, "::introspect::r#struct::Field::new(")?;
 
         match self.identifier.as_ref() {
-            Some(identifier) => write!(f, "Some(\"{}\".into())", identifier)?,
+            Some(identifier) => write!(f, "Some(r#\"{}\"#.into())", identifier)?,
             None => write!(f, "None")?,
         };
 
         write!(f, ", ")?;
 
         match self.documentation.as_ref() {
-            Some(documentation) => write!(f, "Some(\"{}\".into())", documentation)?,
+            Some(documentation) => write!(f, "Some(r#\"{}\"#.into())", documentation)?,
             None => write!(f, "None")?,
         };
 
@@ -180,7 +180,7 @@ mod tests {
 
         assert_eq!(
             field.to_string(),
-            "::introspect::r#struct::Field::new(Some(\"Name\".into()), Some(\"Documentation.\".into()))"
+            "::introspect::r#struct::Field::new(Some(r#\"Name\"#.into()), Some(r#\"Documentation.\"#.into()))"
         )
     }
 
@@ -190,7 +190,7 @@ mod tests {
 
         assert_eq!(
             field.to_string(),
-            "::introspect::r#struct::Field::new(Some(\"Name\".into()), None)"
+            "::introspect::r#struct::Field::new(Some(r#\"Name\"#.into()), None)"
         )
     }
 
@@ -200,7 +200,7 @@ mod tests {
 
         assert_eq!(
             field.to_string(),
-            "::introspect::r#struct::Field::new(None, Some(\"Documentation.\".into()))"
+            "::introspect::r#struct::Field::new(None, Some(r#\"Documentation.\"#.into()))"
         )
     }
 

@@ -4,7 +4,7 @@ version = 3
 
 [[package]]
 name = "introspect"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "introspect-core",
  "introspect-proc-macros",
@@ -12,7 +12,7 @@ dependencies = [
 
 [[package]]
 name = "introspect-core"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "proc-macro2",
  "quote",
